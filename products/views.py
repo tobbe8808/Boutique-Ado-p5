@@ -64,8 +64,22 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+
+    if request.method == 'POST':
+        rating = request.POST.get('rating', 3)
+        content = request.POST.get('content', '')
+
+        review = Review.objects.create(
+            product=product,
+            rating=rating,
+            content=content,
+            created_by=request.user
+        )
+
+    reviews = Review.objects.filter(product=product)
     context = {
         'product': product,
+        'reviews': reviews
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -139,29 +153,9 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
-def product(request, slug):
-    product = get_object_or_404(Product, slug=slug)
 
-    if request.method == 'POST':
-        rating = request.POST.get('rating', 3)
-        content = request.POST.get('content', '')
 
-        if content:
-            reviews = Review.objects.filter(created_by=request.user, product=product)
 
-            if reviews.count() > 0:
-                review = reviews.first()
-                review.rating = rating
-                review.content = content
-                review.save()
-            else:
-                review = Review.objects.create(
-                    product=product,
-                    rating=rating,
-                    content=content,
-                    created_by=request.user
-                )
 
-            return redirect('product', slug=slug)
 
 
