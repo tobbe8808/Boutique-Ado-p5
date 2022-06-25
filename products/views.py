@@ -60,28 +60,24 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
-
-
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
         content = request.POST.get('content', '')
-
-        review = Review.objects.create(
+        Review.objects.create(
             product=product,
             rating=rating,
             content=content,
             created_by=request.user
         )
+        # redirect to the same page
+        return redirect('product_detail', product_id=product_id)
 
     reviews = Review.objects.filter(product=product)
     context = {
         'product': product,
         'reviews': reviews
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
@@ -151,6 +147,15 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+
+
+
+
+
+
+
 
 
 

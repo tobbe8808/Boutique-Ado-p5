@@ -119,7 +119,7 @@
 
                     <div>
                         <label>Rating</label><br>
-                        <select name="rating">
+                        <select class="form-control" name="rating">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3" selected>3</option>
@@ -128,19 +128,18 @@
                         </select>
                     </div>
 
-                    <div>
-                        <label>Comment</label><br>
-                        <textarea name="content"></textarea>
-                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea class="form-control" rows="5" id="comment" name="content"></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary mb-2">Submit</button>
 
-                    <div>
-                        <button>Submit</button>
-                    </div>
                 </form>
             {% endif %}
 
             {% for review in reviews %}
             <div class="px-4 py-6 bg-gray-100 rounded-xl mb-4">
+                <strong>Author:</strong> {{ review.created_by }}<br>
                 <strong>Rating:</strong> {{ review.rating }}/5<br>
                 <strong>Date:</strong> {{ review.created_at|date:"Y-m-d" }}<br>
                 <strong>Comment:</strong><br>
