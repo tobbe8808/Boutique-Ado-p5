@@ -157,32 +157,29 @@ def delete_review(request, review_id):
 
 @login_required
 def edit_review(request, review_id):
-    """
-    Saves review form edited by user
-    """
     review = get_object_or_404(Review, pk=review_id)
-    review_form = ReviewForm(request.POST, instance=review)
     product = Product.objects.get(name=review.product)
 
-    if review_form.is_valid():
-        review_form.save()
-
-        # Success message if added
-        messages.success(request, 'Thank You! Review was edited')
+    if request.method == 'POST':
+        review_form = ReviewForm(request.POST or None, instance=review)
+        if review_form.is_valid():
+            review_form.save()
+            messages.success(request, 'Successfully updated Review!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
     else:
-        # Error message if form was invalid
-        messages.error(request, 'Something went wrong. '
-                                'Make sure the form is valid.')
-
-    form = ReviewForm(instance=review)
-    messages.info(request, f'You are editing {review_id}')
+        review_form = ReviewForm(instance=review)
+        messages.info(request, f'You are editing {review.id}')
 
     template = 'products/edit_review.html'
     context = {
-        'form': form,
-        'product': review,
+        'review_form': review_form,
+        'review': review,
     }
-    return redirect(reverse('product_detail', args=[product.id]))
+
+    return render(request, template, context)
+
 
 
 
