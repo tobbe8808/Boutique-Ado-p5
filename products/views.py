@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Review
-from .forms import ProductForm
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 
@@ -147,6 +147,46 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def delete_review(request, review_id):
+    review = Review.objects.get(id=review_id)
+    product = review.product
+    review.delete()
+    return redirect(reverse('product_detail', args=[product.id]))
+
+@login_required
+def edit_review(request, review_id):
+    """
+    Saves review form edited by user
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    review_form = ReviewForm(request.POST, instance=review)
+    product = Product.objects.get(name=review.product)
+
+    if review_form.is_valid():
+        review_form.save()
+
+        # Success message if added
+        messages.success(request, 'Thank You! Review was edited')
+    else:
+        # Error message if form was invalid
+        messages.error(request, 'Something went wrong. '
+                                'Make sure the form is valid.')
+
+    form = ReviewForm(instance=review)
+    messages.info(request, f'You are editing {review_id}')
+
+    template = 'products/edit_review.html'
+    context = {
+        'form': form,
+        'product': review,
+    }
+    return redirect(reverse('product_detail', args=[product.id]))
+
+
+
+
 
 
 
