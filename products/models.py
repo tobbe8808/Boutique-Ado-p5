@@ -49,6 +49,9 @@ class Review(models.Model):
     content = models.TextField()
     created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    RATINGS = (('1 ',1),('2 ',2),
+          ('3 ',3),('4 ',4),('5 ',5))
+    rating = models.CharField(max_length=7,choices= RATINGS)
 
     def __str__(self):
         return '%s - %s' % (self.product.name, self.created_by)
