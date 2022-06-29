@@ -73,7 +73,7 @@ def product_detail(request, product_id):
         # redirect to the same page
         return redirect('product_detail', product_id=product_id)
 
-    reviews = Review.objects.filter(product=product)
+    reviews = Review.objects.filter(product=product).order_by('-id')
     context = {
         'product': product,
         'reviews': reviews

@@ -10,6 +10,8 @@ body {
     font-family: 'Lato';
 }
 
+
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -266,6 +268,8 @@ input[name='q']::placeholder {
 }
 
 
+
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -290,4 +294,22 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+}
+
+.newsletter-wrapper {
+    padding: 50px 20px;
+    text-align: center;
+    background: #f1f1f1;
+}
+
+    .newsletter-wrapper .notification {
+        margin-top: 20px;
+    }
+
+    .newsletter-wrapper .field.has-addons {
+        justify-content: center;
+    }
+
+.notification.space-below {
+    margin-bottom: 20px;
 }
