@@ -35,6 +35,12 @@ body {
     min-width: 260px;
 }
 
+.sub-now-button {
+    background: green;
+    color: white;
+    min-width: 260px;
+}
+
 .btn-black {
     background: black;
     color: white;
@@ -313,3 +319,4 @@ input[name='q']::placeholder {
 .notification.space-below {
     margin-bottom: 20px;
 }
+

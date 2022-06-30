@@ -1,4 +1,14 @@
-<div class="newsletter-wrapper bg-dark container-fluid" id="newsletter-wrapper">
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+<div class="content-wrapper text-center bg-dark container-fluid" id="newsletter-wrapper">
 
     <form v-on:submit.prevent="onSubmit">
         <div class="card text-white bg-dark mb-3">

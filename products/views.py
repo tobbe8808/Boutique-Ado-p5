@@ -153,6 +153,7 @@ def delete_review(request, review_id):
     review = Review.objects.get(id=review_id)
     product = review.product
     review.delete()
+    messages.success(request, 'Comment deleted!')
     return redirect(reverse('product_detail', args=[product.id]))
 
 @login_required
