@@ -31,3 +31,6 @@ urlpatterns = [
     path('api/add_subscriber/', api_add_subscriber, name='api_add_subscriber'),
     path('contact/', contact_views.contact_view, name='contact'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'home.views.custom_page_not_found_view'
+handler500 = 'home.views.custom_error_view'
