@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/backgroundimg.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -30,7 +30,7 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: blue;
     color: white;
     min-width: 260px;
 }
@@ -59,13 +59,23 @@ body {
     color: white !important;
 }
 
+.sub-now-button:hover,
+.sub-now-button:active,
+.sub-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: purple;
+    color: white;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: purple;
     color: white;
 }
 
