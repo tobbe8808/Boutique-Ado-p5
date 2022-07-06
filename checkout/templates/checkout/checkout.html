@@ -49,7 +49,6 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
@@ -111,7 +110,7 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
+                    <div class="submit-button text-right mt-5 mb-2">
                         <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
