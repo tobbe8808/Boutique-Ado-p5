@@ -46,11 +46,11 @@
             return {
                 email: '',
                 showSuccess: false
-            }
+            };
         },
         methods: {
             onSubmit() {
-                console.log('onSubmit')
+                console.log('onSubmit');
 
                 fetch('/api/add_subscriber/', {
                         method: 'POST',
@@ -61,19 +61,19 @@
                         body: JSON.stringify({'email': this.email})
                     })
                     .then((response) => {
-                        return response.json()
+                        return response.json();
                     })
                     .then((data) => {
-                        console.log(data)
+                        console.log(data);
 
-                        this.showSuccess = true
-                        this.email = ''
+                        this.showSuccess = true;
+                        this.email = '';
                     })
                     .catch(function(error) {
-                        this.showSuccess = false
+                        this.showSuccess = false;
                         console.log('Error:', error);
                     });
             }
         }
-    })
+    });
 </script>
