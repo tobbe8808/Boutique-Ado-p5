@@ -7,23 +7,16 @@ We also have reviews on the website from users, so potential buyers can get some
 The website is a fully functioning e-commerce website, that is fully responsive and working on all devices.<br>
 [Link to HardwareGuru](https://e-store8.herokuapp.com/)
 
-## Wireframes
 
-### PC frontpage
+# UX
+The website has been designed with backgrounds and text that makes it easy for anyone to see what's on the page.<br>
+The design is simple but elegant, and easy navigation so the user had no problems in finding their way around to purchase something.<br>
+The site design is very minimalistic but it works good. We use payment via stripe with simple checkout, and Facebook and newsletter subscriptions.<br>
 
-![alt text](./readme/assets/frontpc.png)
-
-### PC Products page
-
-![alt text](./readme/assets/prodpc.png)
-
-### Mobile frontpage
-
-![alt text](./readme/assets/mobfront.png)
-
-### Mobile productspage
-
-![alt text](./readme/assets/mobprod.png)
+## colors/text used
+Colors automatically generated from [alwane](https://alwane.io/)<br>
+![Colors used](./readme/assets/colorsused.PNG)<br>
+And Font family used is Oswald.<br>
 
 
 ## User Stories
@@ -97,6 +90,24 @@ The website is a fully functioning e-commerce website, that is fully responsive 
 
 
 ![kanban picture](./readme/assets/kanban.PNG)
+
+## Wireframes
+
+### PC frontpage
+
+![alt text](./readme/assets/frontpc.png)
+
+### PC Products page
+
+![alt text](./readme/assets/prodpc.png)
+
+### Mobile frontpage
+
+![alt text](./readme/assets/mobfront.png)
+
+### Mobile productspage
+
+![alt text](./readme/assets/mobprod.png)
 
 
 
@@ -207,6 +218,47 @@ example of local Marketing is using Blocket.se its one of swedens most used adve
 51. Transfer the backup json file you just created with command python3 manage.py loaddata products.json
 52. Now you should see the products in development.
 
+## Search Engine Optimisation (SEO)
+
+I used wordtracker.com to decide what meta tags to use for my search engine optimization.<br>
+I did searches and ended up with the key words that i thought would give the best traffic for me as a small business.<br>
+
+**Meta tags word used**<br>
+
+- PC Parts Cheap Prices Fast Delivery.
+- We got all the new fresh PC components to market low prices.
+- PC parts
+- Parts of computer
+- Budget gaming PC
+- Cpu cheap
+- Gpu cheap
+- Computer parts
+- PC components
+
+
+
+
+## Coding Languages
+
+- HTML
+- CSS
+- Javascript
+- Python
+
+## Libraries, Frameworks and Hosting Used
+- Django
+- HerokuSQL
+- Markdown
+- Django Allauth
+- Bootstrap
+- Stripe
+- jQuery
+- Heroku
+- Github
+- Font Awesome
+- AWS
+- Git
+- vue.js
 
 
 
@@ -221,6 +273,13 @@ Code institute Slack.<br>
 Code institutes Project - Boutique Ado.<br>
 Code institutes Tutor Assistance.<br>
 Code institutes Mentor.<br>
+
+## Images
+
+[pexels](https://www.pexels.com/)<br>
+[newegg](https://www.newegg.com/)<br>
+
+
 
 
 
