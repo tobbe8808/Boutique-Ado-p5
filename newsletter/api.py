@@ -4,6 +4,7 @@ from django.http import JsonResponse
 
 from .models import Subscriber
 
+
 def api_add_subscriber(request):
     data = json.loads(request.body)
     email = data['email']

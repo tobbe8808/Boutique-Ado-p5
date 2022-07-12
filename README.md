@@ -93,7 +93,7 @@ The website is a fully functioning e-commerce website, that is fully responsive 
 - Adding more payment options than credit card.
 - Make the design on the website better.
 
-### I did a Kanban board with github [Kanban Github Link to see full kanban HERE](https://github.com/users/tobbe8808/projects/6) <br>
+### I did a Kanban board with github [Kanban Github projects Link to see full kanban HERE](https://github.com/users/tobbe8808/projects/6) <br>
 
 
 ![kanban picture](./readme/assets/kanban.PNG)
