@@ -110,6 +110,137 @@ And Font family used is Oswald.<br>
 ![alt text](./readme/assets/mobprod.png)
 
 
+##  Features on the website
+
+### Logo name
+
+![Logo name](./readme/assets/logoname.PNG)
+
+
+### Header with navbar
+
+![Header with navbar](./readme/assets/headernav.PNG)
+
+### My account and shopping bag
+
+![My account and shopping bag](./readme/assets/accountandshoppingbag.PNG)
+
+### search function
+
+![search function](./readme/assets/searchfunction.PNG)
+
+### Frontpage call to action buttons
+
+![Frontpage call to action buttons](./readme/assets/calltoaction.PNG)
+
+### Footer with newsletter signup and socials
+
+![Footer with newsletter signup and socials](./readme/assets/footer.PNG)
+
+### Contact form
+
+![Contact form](./readme/assets/contact.PNG)
+
+### Products page
+
+![Products page](./readme/assets/productspage.PNG)
+
+### Sort by on the products page
+
+![Products page](./readme/assets/sortby.PNG)
+
+### Click to scroll all the way up button
+
+![Click to scroll all the way up button](./readme/assets/scrollup.PNG)
+
+### All products sort by navbar dropdown
+
+![All products sort by navbar dropdown](./readme/assets/sortbyallproducts.PNG)
+
+### Sign in
+
+![Sign in](./readme/assets/signin.PNG)
+
+### Register
+
+![Sign in](./readme/assets/register.PNG)
+
+### Shopping bag popup on login with items in your bag.
+
+![Shopping bag popup](./readme/assets/shoppingbagpopup.PNG)
+
+### Product management page
+
+![Product management page](./readme/assets/productmanagement.PNG)
+
+### My profile page
+
+![My profile page](./readme/assets/myprofile.PNG)
+
+### Shopping bag
+
+![Shopping bag](./readme/assets/shoppingbag1.PNG)
+
+### Shopping bag checkout payment
+
+![Shopping bag checkout payment](./readme/assets/checkout2.PNG)
+![Card payment at checkout page](./readme/assets/checkoutcard.PNG)
+
+### Order successfully popup
+
+![Order successfully popup](./readme/assets/sucessbuyPNG.PNG)
+
+### Order confirmation
+
+![Order confirmation](./readme/assets/orderconfirm.PNG)
+
+### Confirmation Email
+
+![Confirmation Email](./readme/assets/confemail.PNG)
+
+### Rating that updates on reviews and edit/delete button for superusers
+
+![Rating that updates on reviews](./readme/assets/ratingupdated.PNG)
+
+### Sign Out
+
+![Sign Out](./readme/assets/signout.PNG)
+
+### Products detail
+
+![Sign Out](./readme/assets/productsdetail.PNG)
+
+### Review comments with edit/delete and star rating
+
+![Sign Out](./readme/assets/reviewcomments.PNG)
+
+### Comment/Review section
+
+![Comment/Review section](./readme/assets/commentsection.PNG)
+
+### Delete success popup
+
+![Delete success popup](./readme/assets/deletesuccess.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -235,7 +366,90 @@ I did searches and ended up with the key words that i thought would give the bes
 - Computer parts
 - PC components
 
+## Validator Testing
 
+- The HTML code was tested using W3C HTML Validator.
+Only error i got from the HTML was from my vue.js code in picture below.
+![html vue.js validation error](./readme/assets/htmlvalerrorvue.PNG)
+- The CSS code  was validated using W3C CSS Validator and no errors were returned.
+- The JavaScript i used JSHint and no errors were found.
+- The python code validated using PEP8. No errors were returned.
+
+## Manual testing 
+
+**If it got an [x] in brackets its tested and works**
+
+- [x] The shop now button should bring you to the products page so you can see the products on one click.
+- [x] The Subscribe button should bring you down to the newsletter signup page.
+- [x] All the social media buttons in the footer should have working and open in another browser tab.
+- [x] The footer with subscribe to newsletter shouldn't be on any register/login/product management/My profile/logout or the shopping cart.
+- [x] All the navbar buttons work and should bring you to the content they are saying they are.
+- [x] When you click the Hardware guru text in the top right corner it should bring you back to the main page.
+- [x] When you go to the products page all the sort by functions should work as intended price low/high, price high/low, rated first, name A-Z, name Z-A, category A-Z and category Z-A.
+- [x] All Products page should also work with soring all categories.
+- [x] The contact form should work and on submit save to the database inside admin contacts.
+- [x] The newsletter signup works and sends the email to the database inside admin Subscribers.
+- [x] The newletter signup won't let you signup with the same email again.
+- [x] The search function is working like it should and finds the producs you are searching for.
+- [x] The products management lets admin add products and pictures, if no picture it chooses a standard no picture image.
+- [x] The admin is allowed to edit products.
+- [x] The admin can delete products.
+- [x] You can edit your profile page.
+- [x] Your order history is saved on my profile page.
+- [x] You can click in on your order number and see the order information.
+- [x] You can login.
+- [x] You can logout.
+- [x] You can register an account.
+- [x] You can add products to the shopping bag.
+- [x] You can add and remove items inside your shopping bag.
+- [x] You can see all your items inside the shopping bag.
+- [x] No shipping cost is updated on orders over 75$.
+- [x] Buying products work.
+- [x] Stripe accepts the payment both without verification and with verification.
+- [x] You get an order confirmation when you buy something.
+- [x] Even if you close down the window before the purchase is done it works and you get an email confirmation and stripe processes the payment.
+- [x] When you close the window before the payment is processed it still saves the order to your order history.
+- [x] You can see reviews even if you are not registered.
+- [x] You can't write reviews if you are not registered.
+- [x] You can write reviews as a registered user.
+- [x] You can edit your reviews as a registered user.
+- [x] You can delete your reviews as a registered user.
+- [x] You can't edit/delete other user reviews.
+- [x] All forms on the website forces you to enter all needed information.
+- [x] When you sign up you get a confirmation email.
+- [x] When you try to login without verifying it tells you to verify.
+- [x] When you verify you can login.
+- [x] The popup when you add items to your cart works.
+- [x] The popup when you logout works.
+- [x] The popups from the checkout cart works.
+- [x] When your order is successfully you get a popup telling you so.
+- [x] If you don't complete all fields in the forms it will tell you.
+- [x] If your credit card didn't work it will tell you.
+- [x] You can't enter any admin section if you got the url, you must be logged in as admin to reach admin places.
+- [x] When you get a confirmation email it sais its from Hardwareguru.
+- [x] Error 404 page works and brings you back to the website again on the link.
+- [x] Error 500 page works and brings you back to the website again on the link.
+- [x] The rating is updated when the user submits review.
+- [x] The Avrage rating is updated bases on avrage review score.
+- [x] All the features from the user stories was also tested.
+
+## Responsive Testing
+
+I used google developer tools to test how responsive the website was.<br>
+I tested all the devices in the below screenshot without problem.<br>
+![responsive test](./readme/assets/responsiveness.PNG)
+
+### Lighthouse testing
+
+I tested all pages in lighthouse with good scores.<br>
+
+**Frontpage with Desktop lighthouse**
+
+![Desktop lighthouse](./readme/assets/lighthousedesktop.PNG)
+
+**Frontpage with Mobile lighthouse**
+
+![Mobile lighthouse](./readme/assets/lighthousemobile.PNG)
 
 
 ## Coding Languages
