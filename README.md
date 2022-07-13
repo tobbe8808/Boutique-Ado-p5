@@ -222,45 +222,9 @@ And Font family used is Oswald.<br>
 
 ![Delete success popup](./readme/assets/deletesuccess.PNG)
 
+### 404 error with return link back to page.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![404](./readme/assets/404.PNG)
 
 
 ## Business model B2C
@@ -282,6 +246,74 @@ example of local Marketing is using Blocket.se its one of swedens most used adve
 
 **Facebook mockup business page**
 ![Facebook business page](./readme/assets/facebook-1.jpg)
+
+
+## Data Schema
+
+![Data Schema](./readme/assets/databaseschema.PNG) <br>
+**User model** <br>
+The User model is when a user registers to the website and makes an account.<br>
+The user makes an account with the allauth that fixes djangos authentication.<br>
+The user makes use of their nickname and the password to login. <br>
+**Userprofile model** <br>
+In the user profile the user saves their information like phone number, street address and<br>
+other personal information from the model as in the picture.<br>
+![User profile](./readme/assets/userprofile.PNG) <br>
+**category model** <br>
+The category model is where all the products categories is saved.<br>
+In mine, I got graphics cards, ram, Monitors and processors.<br>
+![User profile](./readme/assets/categories.PNG) <br>
+**Order model** <br>
+The order model you use when you are using the checkout and buying.<br>
+The model saves all data from the model like stipe pid, normal user details, order total, delivery cost and others seen in the model.<br>
+![Order model](./readme/assets/order.PNG) <br>
+**Product model** <br>
+The product model is the model that adds all the products on the page with the info price and more and saves it so you can edit them and delete<br>
+It will also show all the products on the website.<br>
+![Product model](./readme/assets/productmodel.PNG) <br>
+**orderlineitem model** <br>
+The orderline items is the products you got in your cart, Its connected with the order model so you can do your purchase.<br>
+
+![Orderlineitem model](./readme/assets/orderlineitem.PNG) <br>
+![Orderlineitem admin model](./readme/assets/orderlineitem2.PNG) <br>
+
+**Review model** <br>
+The review model is the model that saves the review comments and star ratings.<br>
+Like what Product is being rated, the comment, username and the rating given.<br>
+Very close relative to the product model.<br>
+
+![Review model](./readme/assets/reviewmodel.PNG) <br>
+
+**Subscriber model** <br>
+The subscription model is a standalone model.<br>
+It just registers the email the user signsup with for the newsletter and saves it to the database.<br>
+
+![Subscriber model](./readme/assets/sub.PNG) <br>
+
+**Contact model** <br>
+The contact model is a standalone model.<br>
+It just saves the email, subject and message to the database for the admin to see.<br>
+
+![Subscriber model](./readme/assets/contactmodel.PNG) <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -377,7 +409,6 @@ Only error i got from the HTML was from my vue.js code in picture below.
 
 ## Manual testing 
 
-**If it got an [x] in brackets its tested and works**
 
 - [x] The shop now button should bring you to the products page so you can see the products on one click.
 - [x] The Subscribe button should bring you down to the newsletter signup page.
