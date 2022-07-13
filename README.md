@@ -405,9 +405,9 @@ Only error i got from the HTML was from my vue.js code in picture below.
 ![html vue.js validation error](./readme/assets/htmlvalerrorvue.PNG)
 - The CSS code  was validated using W3C CSS Validator and no errors were returned.
 - The JavaScript i used JSHint and no errors were found.
-- The python code validated using PEP8. No errors were returned.
+- The python code validated using PEP8. No errors were returned. All PEP8 fixed except settings.py.
 
-## Manual testing 
+## Manual testing
 
 
 - [x] The shop now button should bring you to the products page so you can see the products on one click.
